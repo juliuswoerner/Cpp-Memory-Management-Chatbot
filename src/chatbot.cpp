@@ -74,7 +74,7 @@ ChatBot::ChatBot (ChatBot &&other){
     _chatLogic = other._chatLogic;
     _rootNode = other._rootNode;
 
-    delete other;
+    delete *other;
 }
 
 ChatBot& ChatBot::operator=(ChatBot &&other){
@@ -83,7 +83,7 @@ ChatBot& ChatBot::operator=(ChatBot &&other){
     _chatLogic = other._chatLogic;
     _rootNode = other._rootNode;
 
-    delete other;
+    delete *other;
 
     return *this;
 } 
