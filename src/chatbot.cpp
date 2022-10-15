@@ -50,9 +50,9 @@ ChatBot::ChatBot(const ChatBot &other){
     
     std::cout << "Hello from copy constructor" << std::endl;
 
-    _image = new wxBitmap(*originChatbot._image);
-    _chatLogic = originChatbot._chatLogic;
-    _rootNode = originChatbot._rootNode;
+    _image = new wxBitmap(*other._image);
+    _chatLogic = other._chatLogic;
+    _rootNode = other._rootNode;
 }
 
 // copy assignment
