@@ -36,7 +36,6 @@ ChatLogic::~ChatLogic()
     delete _chatBot;
 
     // delete all nodes
-    delete _nodes;
     for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it)
     {
         delete std::unique_ptr<GraphNode> it;
