@@ -36,20 +36,18 @@ ChatLogic::~ChatLogic()
     delete _chatBot;
 
     // delete all nodes
-    delete _nodes.release();
-    // for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it)
-    // {
-    //     delete it.release();
-    //     //delete std::unique_ptr<GraphNode> *it;
-    // }
+    for (auto it = std::begin(_nodes); it != std::end(_nodes); ++it)
+    {
+        delete it.release();
+        //delete std::unique_ptr<GraphNode> *it;
+    }
 
     // delete all edges
-    delete _edges.release();
-    // for (auto it = std::begin(_edges); it != std::end(_edges); ++it)
-    // {
-    //     delete it.release();
-    //     // delete std::unique_ptr<GraphEdge> *it;
-    // }
+    for (auto it = std::begin(_edges); it != std::end(_edges); ++it)
+    {
+        delete it.release();
+        // delete std::unique_ptr<GraphEdge> *it;
+    }
 
     ////
     //// EOF STUDENT CODE
