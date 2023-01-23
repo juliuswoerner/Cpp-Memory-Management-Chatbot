@@ -8,9 +8,7 @@
 #include <memory>
 
 #include "graphedge.h"
-#include "graphnode.h"
 #include "chatbot.h"
-#include "chatlogic.h"
 
 
 ChatLogic::ChatLogic()
@@ -217,9 +215,11 @@ void ChatLogic::LoadAnswerGraphFromFile(std::string filename)
         }
     }
 
+    Chatbot chatbot("../images/chatbot.png");
+
     // add chatbot to graph root node
-    _chatBot->SetRootNode(rootNode);
-    rootNode->MoveChatbotHere(_chatBot);
+    chatbot.SetRootNode(rootNode)
+    rootNode.MoveChatbotHere(std::move(chatBot));
     
     ////
     //// EOF STUDENT CODE
