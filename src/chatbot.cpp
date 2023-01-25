@@ -60,9 +60,6 @@ ChatBot& ChatBot::operator=(const ChatBot &other){
 
     std::cout << "Copy Assignment: " << this << "=" << &other << std::endl;
 
-    //std::swap(_image, other._image);
-    //std::swap(_chatLogic, other._chatLogic);
-    //std::swap(_rootNode, other._rootNode);
     _image = new wxBitmap(*other._image);
     _chatLogic = other._chatLogic;
     _rootNode = other._rootNode;
